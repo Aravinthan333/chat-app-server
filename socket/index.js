@@ -26,6 +26,7 @@ const io = new Server(server, {
   cors: {
     origin: "https://social-chat-app-001.netlify.app",
     optionsSuccessStatus: 200,
+    credentials: true,
   },
 });
 
