@@ -25,7 +25,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://social-chat-app-001.netlify.app",
-    optionsSuccessStatus: 200,
+    methods: ["GET", "POST"],
     credentials: true,
   },
 });
