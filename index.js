@@ -8,11 +8,20 @@ const { app, server } = require("./socket/index");
 
 // const app = express();
 
+// app.use(
+//   cors({
+//     origin: process.env.FRONTEND_URL,
+//     origin: 'https://social-chat-app-001.netlify.app',
+//   optionsSuccessStatus: 200,
+//     // origin: "*",
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
-    // origin: "*",
-    credentials: true,
+    origin: "https://social-chat-app-001.netlify.app",
+    optionsSuccessStatus: 200,
   })
 );
 
