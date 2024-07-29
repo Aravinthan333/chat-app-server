@@ -18,13 +18,13 @@ const { app, server } = require("./socket/index");
 //   })
 // );
 
-app.use(
-  cors({
-    origin: "https://social-chat-app-001.netlify.app",
-    optionsSuccessStatus: 200,
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: "https://social-chat-app-001.netlify.app",
+  optionsSuccessStatus: 200,
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.options("/api/password", cors(corsOptions));
 app.options("/api/register", cors(corsOptions));
