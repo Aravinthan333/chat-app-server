@@ -22,8 +22,12 @@ app.use(
   cors({
     origin: "https://social-chat-app-001.netlify.app",
     optionsSuccessStatus: 200,
+    credentials: true,
   })
 );
+
+app.options("/api/password", cors(corsOptions));
+app.options("/api/register", cors(corsOptions));
 
 // app.use(cors);
 
