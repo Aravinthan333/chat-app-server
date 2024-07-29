@@ -28,6 +28,11 @@ app.use(cors(corsOptions));
 
 app.options("/api/password", cors(corsOptions));
 app.options("/api/register", cors(corsOptions));
+app.options("/api/email", cors(corsOptions));
+app.options("/api/user-details", cors(corsOptions));
+app.options("/api/logout", cors(corsOptions));
+app.options("/api/update-user", cors(corsOptions));
+app.options("/api/serach-user", cors(corsOptions));
 
 // app.use(cors);
 
