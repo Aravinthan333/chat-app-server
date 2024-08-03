@@ -30,7 +30,7 @@ async function checkPassword(request, response) {
       secure: true,
     };
 
-    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+    response.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
 
     return response.cookie("token", token, cookieOptions).status(200).json({
       message: "Login successfully",

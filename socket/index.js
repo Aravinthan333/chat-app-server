@@ -27,6 +27,7 @@ const io = new Server(server, {
     origin: "https://social-chat-app-001.netlify.app",
     methods: ["GET", "POST"],
     credentials: true,
+    allowedHeaders: "https://social-chat-app-001.netlify.app",
   },
 });
 

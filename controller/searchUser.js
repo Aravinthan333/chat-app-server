@@ -10,7 +10,7 @@ async function searchUser(request, response) {
       $or: [{ name: query }, { email: query }],
     }).select("-password");
 
-    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+    response.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
 
     return response.json({
       message: "all user",

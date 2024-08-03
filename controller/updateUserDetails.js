@@ -19,7 +19,7 @@ async function updateUserDetails(request, response) {
 
     const userInfomation = await UserModel.findById(user._id);
 
-    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+    response.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
 
     return response.json({
       message: "user update successfully",

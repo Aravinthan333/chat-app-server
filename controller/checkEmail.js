@@ -20,7 +20,7 @@ async function checkEmail(request, response) {
       });
     }
 
-    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+    response.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
 
     return response.status(200).json({
       message: "email verify",
