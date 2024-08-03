@@ -5,6 +5,8 @@ async function logout(request, response) {
       secure: true,
     };
 
+    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+
     return response.cookie("token", "", cookieOptions).status(200).json({
       message: "session out",
       success: true,

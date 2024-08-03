@@ -6,6 +6,8 @@ async function userDetails(request, response) {
 
     const user = await getUserDetailsFromToken(token);
 
+    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+
     return response.status(200).json({
       message: "user details",
       data: user,

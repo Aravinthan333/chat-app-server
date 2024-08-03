@@ -35,6 +35,8 @@ async function registerUser(request, response) {
     const user = new UserModel(payload);
     const userSave = await user.save();
 
+    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+
     return response.status(201).json({
       message: "User created successfully",
       data: userSave,
