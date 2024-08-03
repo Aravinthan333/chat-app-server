@@ -19,7 +19,10 @@ async function updateUserDetails(request, response) {
 
     const userInfomation = await UserModel.findById(user._id);
 
-    response.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+    response.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://social-chat-app-001.netlify.app"
+    );
 
     return response.json({
       message: "user update successfully",

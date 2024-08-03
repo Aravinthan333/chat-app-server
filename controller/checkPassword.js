@@ -30,7 +30,10 @@ async function checkPassword(request, response) {
       secure: true,
     };
 
-    response.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+    response.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://social-chat-app-001.netlify.app"
+    );
 
     return response.cookie("token", token, cookieOptions).status(200).json({
       message: "Login successfully",

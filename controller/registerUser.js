@@ -35,7 +35,10 @@ async function registerUser(request, response) {
     const user = new UserModel(payload);
     const userSave = await user.save();
 
-    response.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
+    response.setHeader(
+      "Access-Control-Allow-Origin",
+      "https://social-chat-app-001.netlify.app"
+    );
 
     return response.status(201).json({
       message: "User created successfully",
